@@ -8,6 +8,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { ListagemComponent } from './listagem/listagem.component';
 import { FotoModule } from './foto/foto.module';
 import { PainelModule } from './painel/painel.module';
+import { BotaoModule } from './botao/botao.module';
 import { AppComponent } from './app.component';
 
 import { routing } from './app.routes';
@@ -22,7 +23,8 @@ import 'rxjs/add/operator/map';
         ReactiveFormsModule,
         routing,
         FotoModule,        
-        PainelModule
+        PainelModule,
+        BotaoModule
     ],
     declarations: [
         AppComponent,

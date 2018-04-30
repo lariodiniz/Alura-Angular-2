@@ -21,22 +21,22 @@ export class ListagemComponent{
     }
 
     remove(foto: FotoComponent){
+        
         this.service
-            .remove(foto)
-            .subscribe(
-                () => {
+        .remove(foto)
+        .subscribe(
+            () => {
 
-                    let novasFotos = this.fotos.slice(0);
-                    let indice = novasFotos.indexOf(foto);
-                    novasFotos.splice(indice, 1);
-                    this.fotos = novasFotos;
-                    this.mensagem = "Foto removida com sucesso!";
-                },
-                erro => {
-                    console.log(erro);
-                    this.mensagem = "Não fossivel remover a foto";
-                }
-            );
-
+                let novasFotos = this.fotos.slice(0);
+                let indice = novasFotos.indexOf(foto);
+                novasFotos.splice(indice, 1);
+                this.fotos = novasFotos;
+                this.mensagem = "Foto removida com sucesso!";
+            },
+            erro => {
+                console.log(erro);
+                this.mensagem = "Não fossivel remover a foto";
+            }
+        );          
     }
 }
